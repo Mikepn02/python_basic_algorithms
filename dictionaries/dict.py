@@ -11,11 +11,12 @@ for lines in fhand:
      stripline = line.split()
     #  print(stripline[2])
      day = stripline[2]
+     mailCount[day] = mailCount.get(day,0) + 1
 
-     if day in mailCount:
-        mailCount[day] +=  1
-     else:
-        mailCount[day] = 1
+    #  if day in mailCount:
+    #     mailCount[day] +=  1
+    #  else:
+    #     mailCount[day] = 1
 
 print(mailCount)   
     
