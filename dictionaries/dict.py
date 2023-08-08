@@ -11,7 +11,12 @@ for lines in fhand:
      stripline = line.split()
     #  print(stripline[2])
      day = stripline[2]
-     mailCount[day] = mailCount.get(day,0) + 1
+     domain = stripline[1]
+     letter = '@'
+     index = domain.index(letter)
+     sliced = domain[index:]
+     mailCount[sliced] = mailCount.get(sliced,0) + 1
+    #  mailCount[day] = mailCount.get(day,0) + 1
 
     #  if day in mailCount:
     #     mailCount[day] +=  1
